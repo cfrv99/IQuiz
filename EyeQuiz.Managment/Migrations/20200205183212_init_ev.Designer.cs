@@ -3,14 +3,16 @@ using EyeQuiz.Managment.Entites;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EyeQuiz.Managment.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20200205183212_init_ev")]
+    partial class init_ev
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,8 +35,6 @@ namespace EyeQuiz.Managment.Migrations
                     b.Property<string>("AsnwerC");
 
                     b.Property<string>("CorrectAnswer");
-
-                    b.Property<int>("Point");
 
                     b.Property<string>("QuestionName");
 

@@ -1,0 +1,47 @@
+﻿@model QuestionVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-5">
+
+            <form asp-action="Create" asp-controller="Exam" method="post">
+                <div class="form-group">
+                    <label asp-for="QuestionName">Question</label>
+                    <textarea class="form-control" asp-for="QuestionName" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="AnswerA">Variants</label>
+                    <input asp-for="AnswerA" class="form-control form-control-lg" type="text" placeholder="A variant">
+                </div>
+                <div class="form-group">
+                    <label asp-for="AnswerB">Variants</label>
+                    <input asp-for="AnswerB" class="form-control form-control-lg" type="text" placeholder="B variant">
+                </div>
+                <div class="form-group">
+                    <label asp-for="AnswerC">Variants</label>
+                    <input asp-for="AnswerC" class="form-control form-control-lg" type="text" placeholder="C variant">
+                </div>
+                <div class="form-group">
+                    <label asp-for="AnswerD">Variants</label>
+                    <input asp-for="AnswerD" class="form-control form-control-lg" type="text" placeholder="D variant">
+                </div>
+                <div class="form-group">
+                    <label asp-for="Point">Point</label>
+                    <input asp-for="Point" class="form-control form-control-lg" type="number" placeholder="Point">
+                </div>
+                <div class="form-group">
+                    <label asp-for="CorrectVariant">Correct</label>
+                    <input asp-for="CorrectVariant" class="form-control form-control-lg" type="text" placeholder="Correct Variant">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Create Question</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

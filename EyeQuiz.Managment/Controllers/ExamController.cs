@@ -1,4 +1,5 @@
 ﻿using EyeQuiz.Managment.Entites;
+using EyeQuiz.Managment.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,40 @@ namespace EyeQuiz.Managment.Controllers
             ViewBag.Result = result;
             return View(questions);
         }
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View(new QuestionVM());
+        }
 
+        [HttpPost]
+        public IActionResult Create(QuestionVM vm)
+        {
+            if (ModelState.IsValid)
+            {
+                Question q = new Question
+                {
+                    QuestionName = vm.QuestionName,
+                    AnswerA = vm.AnswerA,
+                    AnswerB = vm.AnswerB,
+                    AnswerD = vm.AnswerD,
+                    AsnwerC = vm.AnswerC,
+                    CorrectAnswer = vm.CorrectVariant,
+                    Point=vm.Point
+                };
+                context.Questions.Add(q);
+                
+                var isSave = context.SaveChanges();
+                if (isSave > 0)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                throw new Exception("Database ex");
+
+            }
+
+            return View();
+        }
         [HttpPost]
         public ActionResult SetAnswer(List<string> answer)
         {
@@ -37,13 +71,22 @@ namespace EyeQuiz.Managment.Controllers
                 {
                     if (question.CorrectAnswer == a)
                     {
-                        sum = sum + 1;
+                        sum = sum + question.Point;
                         break;
                     }
                 }
             }
 
-            
+            if (sum < 30)
+            {
+                TempData["Valid"] = "Siz Kesilmisiniz ";
+            }
+            else if (sum > 100)
+            {
+                TempData["Valid"] = "Elasan";
+            }
+
+                    
             return RedirectToAction("Test", new { result = sum });
         }
     }

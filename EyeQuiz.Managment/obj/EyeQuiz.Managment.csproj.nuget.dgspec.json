@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jafa_eq70\\source\\repos\\EyeQuiz.Managment\\EyeQuiz.Managment\\EyeQuiz.Managment.csproj": {}
+    "C:\\Users\\Murad\\Downloads\\EyeQuiz.Managment\\EyeQuiz.Managment\\EyeQuiz.Managment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jafa_eq70\\source\\repos\\EyeQuiz.Managment\\EyeQuiz.Managment\\EyeQuiz.Managment.csproj": {
+    "C:\\Users\\Murad\\Downloads\\EyeQuiz.Managment\\EyeQuiz.Managment\\EyeQuiz.Managment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jafa_eq70\\source\\repos\\EyeQuiz.Managment\\EyeQuiz.Managment\\EyeQuiz.Managment.csproj",
+        "projectUniqueName": "C:\\Users\\Murad\\Downloads\\EyeQuiz.Managment\\EyeQuiz.Managment\\EyeQuiz.Managment.csproj",
         "projectName": "EyeQuiz.Managment",
-        "projectPath": "C:\\Users\\jafa_eq70\\source\\repos\\EyeQuiz.Managment\\EyeQuiz.Managment\\EyeQuiz.Managment.csproj",
-        "packagesPath": "C:\\Users\\jafa_eq70\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jafa_eq70\\source\\repos\\EyeQuiz.Managment\\EyeQuiz.Managment\\obj\\",
+        "projectPath": "C:\\Users\\Murad\\Downloads\\EyeQuiz.Managment\\EyeQuiz.Managment\\EyeQuiz.Managment.csproj",
+        "packagesPath": "C:\\Users\\Murad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Murad\\Downloads\\EyeQuiz.Managment\\EyeQuiz.Managment\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jafa_eq70\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Murad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -74,7 +70,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

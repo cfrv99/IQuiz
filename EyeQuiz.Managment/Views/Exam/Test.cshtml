@@ -16,14 +16,14 @@
                 @count . @question.QuestionName
             </div>
             <div class="form-check">
-                <label>A)</label> <input class="form-check-input" group type="radio" name="answer[@i]"  value="@(question.AnswerA!=null ? question.AnswerA : null)">
+                <input class="form-check-input" group type="radio" name="answer[@i]"  value="@(question.AnswerA!=null ? question.AnswerA : null)">
                 <label class="form-check-label" for="answer">
                       @question.AnswerA
                 </label>
             </div>
 
             <div class="form-check">
-                <label>B)</label> <input class="form-check-input" type="radio" name="answer[@i]"  value="@(question.AnswerB!=null ? question.AnswerB : null)">
+                <input class="form-check-input" type="radio" name="answer[@i]"  value="@(question.AnswerB!=null ? question.AnswerB : null)">
                 <label class="form-check-label" for="answer">
                      @question.AnswerB
                 </label>
@@ -31,14 +31,14 @@
 
 
             <div class="form-check">
-                <label>C)</label> <input class="form-check-input" type="radio" name="answer[@i]" value="@(question.AsnwerC!=null ? question.AsnwerC : null)">
+                <input class="form-check-input" type="radio" name="answer[@i]" value="@(question.AsnwerC!=null ? question.AsnwerC : null)">
                 <label class="form-check-label" for="answer">
                      @question.AsnwerC
                 </label>
             </div>
 
             <div class="form-check">
-                <label>D)</label> <input class="form-check-input" type="radio" name="answer[@i]" value="@(question.AnswerD!=null ? question.AnswerD : null)">
+                <input class="form-check-input" type="radio" name="answer[@i]" value="@(question.AnswerD!=null ? question.AnswerD : null)">
                 <label class="form-check-label" for="answer">
                      @question.AnswerD
                 </label>
@@ -54,6 +54,6 @@
         
     }
     <button type="submit" class="btn btn-primary">Calculate Result!!!</button>
-    <h1>@ViewBag.Result</h1>
+    <h1>Score:@ViewBag.Result  Message: @TempData["Valid"]</h1>
 </form>
 

@@ -15,7 +15,8 @@ namespace EyeQuiz.Managment.Entites
         public string AnswerD { get; set; }
         public int Point { get; set; }
         public string CorrectAnswer { get; set; }
-
+        public int? ExamId { get; set; }
+        public Exam Exam { get; set; }
 
     }
 }

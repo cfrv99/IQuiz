@@ -67,9 +67,9 @@ namespace EyeQuiz.Managment.Controllers
             int sum = 0;
             foreach (var question in questions)
             {
-                foreach (var a in answer)
+                foreach (string yourAnswer in answer)
                 {
-                    if (question.CorrectAnswer == a)
+                    if (ValidateCorrectVariant(question.CorrectAnswer, yourAnswer))
                     {
                         sum = sum + question.Point;
                         break;
@@ -88,6 +88,11 @@ namespace EyeQuiz.Managment.Controllers
 
                     
             return RedirectToAction("Test", new { result = sum });
+        }
+
+        private bool ValidateCorrectVariant(string correct, string yourAnswer)
+        {
+            return (correct == yourAnswer);
         }
     }
 }
